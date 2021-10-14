@@ -17,6 +17,7 @@ args = sys.argv;
 if (len(args) < 2):
     print("Incorrect argument's amount");
 else:
+    waiting_period = int(args[1]);
     print("Запущена программа Child в процессе с PID", os.getpid(),"с аргументом",waiting_period)
     time.sleep(waiting_period);
     exit_status = int(random.uniform(0, 2));
