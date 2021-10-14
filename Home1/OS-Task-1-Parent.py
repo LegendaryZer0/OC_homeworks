@@ -23,8 +23,8 @@ else:
             if i==0:
                 print("Запущена программа Parent с  PID",os.getpid());
         else:
-            random_num = int(random.uniform(5, 11));
-            os.execl("./OS-Task-1-Child.py", "OS-Task-1-Child.py", str(random_num));
+            random = int(random.uniform(5, 11));
+            os.execv(sys.executable, ("python3", "./OS-Task-1-Child.py", str(random)))
             break;
 
 
